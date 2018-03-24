@@ -17,6 +17,8 @@ ADD requirements.txt /opt/requestbin/
 RUN pip install -r /opt/requestbin/requirements.txt \
     && rm -rf ~/.pip/cache
 
+ENV ROOT_URL 'http://localhost:4000'
+
 # the code
 ADD requestbin  /opt/requestbin/requestbin/
 
