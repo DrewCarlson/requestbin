@@ -2,7 +2,7 @@ import os, urlparse
 DEBUG = True
 REALM = os.environ.get('REALM', 'local')
 
-ROOT_URL = os.environ.get('ROOT_URL', 'http://localhost:4000')
+ROOT_URL = "http://localhost:4000"
 
 PORT_NUMBER = 4000
 
@@ -30,6 +30,7 @@ BUGSNAG_KEY = ""
 
 if REALM == 'prod':
     DEBUG = False
+    ROOT_URL = "http://requestb.in"
 
     FLASK_SESSION_SECRET_KEY = os.environ.get("SESSION_SECRET_KEY", FLASK_SESSION_SECRET_KEY)
 

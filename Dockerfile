@@ -27,7 +27,6 @@ RUN pip install --quiet --disable-pip-version-check -r requirements.txt
 ENV REALM prod
 RUN sed -i 's/DEBUG = False/DEBUG = True/' requestbin/config.py
 
-ENV ROOT_URL http://localhost
 ENV PORT 80
 EXPOSE 80
 
